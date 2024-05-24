@@ -8,7 +8,99 @@
     <link rel="icon" type="image/x-icon" href="icon.ico">   
 </head>
 <body>
-	<h1 style="text-align: center">Welcome to my Personal website!</h1>
-    <script type="module" src="public/main.js"></script>
+    <header class="header">
+        <h1>Kori Huen</h1>
+        <p>Software Engineer</p>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p> Hello! I am currently a third year Computer Science Student at the University of British Columbia.
+            My interests are in Backend and DevOps engineering in languages such as Java, Python, and Javascipt.
+            I have experience in technologies such as Kubernetes, Docker, and Redis.
+        </p>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project">
+                <h3>Seagulls Nest</h3>
+                <p>Machine Vision model to detect and label airport stuff</p>
+                <a href="https://github.com/KoriH/seagulls-nest">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Concussie</h3>
+                <p>Machine vision model that detects concussions</p>
+                <a href="https://github.com/KoriH/concussie">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Library</h3>
+                <p>App that lets you save your books into a library online</p>
+                <a href="https://github.com/KoriH/library">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Etch-a-Sketch</h3>
+                <p>A little program that lets you do pixel drawings</p>
+                <a href="https://github.com/KoriH/etch-a-sketch">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Rock Paper Scissors</h3>
+                <p>Online app that lets you play rock paper scissors</p>
+                <a href="https://github.com/KoriH/rock-paper-scissors">View Project</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <h2>Experience</h2>
+        <div class="experience-grid">
+            <div class="job">
+                <h3>Software Engineer</h3>
+                <p>Government of Canada</p>
+                <p>Duration: Jan 2024 - Present</p>
+                <li>Utilized Prometheus and Grafana to monitor micro-service logs inside a Kubernetes cluster</li>
+                <li>Implemented a test-driven development methodology for feature development within Java-based micro-services</li>
+                <li>Worked with Kafka for real-time data processing and streaming pipelining</li>
+                <li>Developed and deployed microservices across a Kubernetes clusters in production and staging environments</li>
+                <li>Created Python frameworks and internal tools to automate micro-service and script deployments in Kubernetes</li>
+                <li>Leveraged Azure DevOps to pipeline application deployment</li>
+
+            </div>
+            <div class="job">
+                <h3>Software Engineer</h3>
+                <p>Agrobots</p>
+                <p>Duration: Jan 2024 - Present</p>
+                <li>Leveraged React.js and Tailwind CSS to develop a modern and responsive website application ensuring cross-browser compatibility and optimal user experience across desktop and mobile devices</li>
+                <li>Implemented backend server logic and database integration using Node.js, Express.js, and Supabase, enabling data storage, retrieval, and manipulation for web applications</li>
+                <li>Integrated third-party APIs and services, such as payment gateways, social media platforms, and analytics tools, to enhance website functionality and user experience</li>
+                <li>Actively participated in Agile methodologies such as sprint planning, daily stand-ups, and retrospectives</li>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, feel free to reach out on LinkedIn or send me an email!</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/korihuen" target="_blank">LinkedIn</a>
+            <a href="mailto:korihuen@outlook.com">Email</a>
+            <a href="https://www.github.com/korih">Github</a>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
