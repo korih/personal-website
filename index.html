@@ -1,106 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="icon.ico">   
 </head>
+
 <body>
-    <header class="header">
-        <h1>Kori Huen</h1>
-        <p>Software Engineer</p>
-    </header>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p> Hello! I am currently a third year Computer Science Student at the University of British Columbia.
-            My interests are in Backend and DevOps engineering in languages such as Java, Python, and Javascipt.
-            I have experience in technologies such as Kubernetes, Docker, and Redis.
-        </p>
-    </section>
-
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project">
-                <h3>Seagulls Nest</h3>
-                <p>Machine Vision model to detect and label airport stuff</p>
-                <a href="https://github.com/KoriH/seagulls-nest">View Project</a>
+    <div class="container">
+        <div class="container-inner">
+            <div id="left-pane">
+                <div id="name">
+                    <h1 class="header-text">Kori H.</h1>
+                </div>
+                <div id="into">
+                    <p class="sub-text title">
+                        Junior Software Engineer
+                    </p>
+                    <p class="sub-text description">
+                        Hello there! I am a Computer Science Student at the University of British Columbia with
+                        experience and interest in building engaging interactive FullStack web applications and
+                        engineering high performance data solutions in the cloud!
+                    </p>
+                </div>
+                <nav id="nav">
+                    <ul class="links">
+                        <li class="jumps">
+                            <a class="link" href="#about">
+                                <span class="link-bar">
+                                    -
+                                </span>
+                                <span class="link-name">
+                                    About
+                                </span>
+                            </a>
+                        </li>
+                        <li class="jumps">
+                            <a class="link" href="#skills">
+                                <span class="link-bar">
+                                    -
+                                </span>
+                                <span class="link-name">
+                                    Skills
+                                </span>
+                            </a>
+                        </li>
+                        <li class="jumps">
+                            <a class="link" href="#experiences">
+                                <span class="link-bar">
+                                    -
+                                </span>
+                                <span class="link-name">
+                                    Experiences
+                                </span>
+                            </a>
+                        </li>
+                        <li class="jumps">
+                            <a class="link" href="#projects">
+                                <span class="link-bar">
+                                    -
+                                </span>
+                                <span class="link-name">
+                                    Projects
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul id="socials">
+                    <li class="icon first">
+                        <a class="social" href="https://github.com/korih">
+                            <svg width="24" height="24" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg"
+                                fill="white">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                                    fill="#fff" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a class="social" href="https://www.linkedin.com/in/korihuen/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a class="social" href="mailto:kori0909@students.ubc.ca">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
+                                class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="project">
-                <h3>Concussie</h3>
-                <p>Machine vision model that detects concussions</p>
-                <a href="https://github.com/KoriH/concussie">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Library</h3>
-                <p>App that lets you save your books into a library online</p>
-                <a href="https://github.com/KoriH/library">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Etch-a-Sketch</h3>
-                <p>A little program that lets you do pixel drawings</p>
-                <a href="https://github.com/KoriH/etch-a-sketch">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Rock Paper Scissors</h3>
-                <p>Online app that lets you play rock paper scissors</p>
-                <a href="https://github.com/KoriH/rock-paper-scissors">View Project</a>
-            </div>
-
         </div>
-    </section>
+        <div id="right-pane">
+            <section id="about">
+                <h2>About</h2>
+                <p>
+                    Hello there! I am a Computer Science Student at the University of British Columbia with experience
+                    and interest in building engaging interactive FullStack web applications while also engineering high
+                    performance data solutions in the cloud!
+                    <br />
+                    <br />
+                    Hello there! I am a Computer Science Student at the University of British Columbia with experience
+                    and interest in building engaging interactive FullStack web applications while also engineering high
+                    performance data solutions in the cloud!
+                    <br />
+                    <br />
+                    Hello there! I am a Computer Science Student at the University of British Columbia with experience
+                    and interest in building engaging interactive FullStack web applications while also engineering high
+                    performance data solutions in the cloud!
 
-    <section id="experience" class="section">
-        <h2>Experience</h2>
-        <div class="experience-grid">
-            <div class="job">
-                <h3>Software Engineer</h3>
-                <p>Government of Canada</p>
-                <p>Duration: Jan 2024 - Present</p>
-                <li>Utilized Prometheus and Grafana to monitor micro-service logs inside a Kubernetes cluster</li>
-                <li>Implemented a test-driven development methodology for feature development within Java-based micro-services</li>
-                <li>Worked with Kafka for real-time data processing and streaming pipelining</li>
-                <li>Developed and deployed microservices across a Kubernetes clusters in production and staging environments</li>
-                <li>Created Python frameworks and internal tools to automate micro-service and script deployments in Kubernetes</li>
-                <li>Leveraged Azure DevOps to pipeline application deployment</li>
+                </p>
+            </section>
+            <section id="skills">
 
-            </div>
-            <div class="job">
-                <h3>Software Engineer</h3>
-                <p>Agrobots</p>
-                <p>Duration: Jan 2024 - Present</p>
-                <li>Leveraged React.js and Tailwind CSS to develop a modern and responsive website application ensuring cross-browser compatibility and optimal user experience across desktop and mobile devices</li>
-                <li>Implemented backend server logic and database integration using Node.js, Express.js, and Supabase, enabling data storage, retrieval, and manipulation for web applications</li>
-                <li>Integrated third-party APIs and services, such as payment gateways, social media platforms, and analytics tools, to enhance website functionality and user experience</li>
-                <li>Actively participated in Agile methodologies such as sprint planning, daily stand-ups, and retrospectives</li>
-            </div>
+                <div class="skills">
+                    <h3 id="languages" class="skills-headers">Languages</h3>
+                    <ul class="skills-list">
 
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Java</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Python</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Javascript</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Typescript</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">HTML/CSS</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">SQL</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">PHP</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Shell</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Lua</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">R</span>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="skills">
+                    <h3 id="frameworks" class="skills-headers">Frameworks</h3>
+                    <ul class="skills-list">
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">React</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Express</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">ThreeJs</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">GSAP</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Spring Boot</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Project Reactor</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">JUnit</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Mockito</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Flask</span>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="skills">
+                    <h3 id="tools" class="skills-headers">Tools</h3>
+                    <ul class="skills-list">
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Azure</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Prometheus</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Grafana</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Loki</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">InfluxDB</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">MongoDB</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Linux</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Redis</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Supabase</span>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="skills">
+                    <h3 id="technologies" class="skills-headers">Technologies</h3>
+                    <ul class="skills-list">
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Kafka</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Kubernetes</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Docker</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Proxmox</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="skills-element">
+                            <a class="skill" href="">
+                                <div class="skill-box">
+                                    <span class="skill-name">Node</span>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </section>
+            <section id="experiences">
+                <h2>Experiences</h2>
+                <p>
+                    Hello there! I am a Computer Science Student at the University of British Columbia with experience
+                    and interest in building engaging interactive FullStack web applications while also engineering high
+                    performance data solutions in the cloud!
+                    Hello there! I am a Computer Science Student at the University of British Columbia with experience
+                    Hello there! I am a Computer Science Student at the University of British Columbia with experience
+                    <br />
+                    <br />
+                    Hello there! I am a Computer Science Student at the University of British Columbia with experience
+                    and interest in building engaging interactive FullStack web applications while also engineering high
+                    performance data solutions in the cloud!
+                    and interest in building engaging interactive FullStack web applications while also engineering high
+                    <br />
+                    <br />
+                    performance data solutions in the cloud!
+                    and interest in building engaging interactive FullStack web applications while also engineering high
+                    performance data solutions in the cloud!
+                </p>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>
+                    Hello there! I am a Computer Science Student at the University of British Columbia with experience
+                    and interest in building engaging interactive FullStack web applications while also engineering high
+                    performance data solutions in the cloud!
+                    Hello there! I am a Computer Science Student at the University of British Columbia with experience
+                    Hello there! I am a Computer Science Student at the University of British Columbia with experience
+                    <br />
+                    <br />
+                    Hello there! I am a Computer Science Student at the University of British Columbia with experience
+                    and interest in building engaging interactive FullStack web applications while also engineering high
+                    performance data solutions in the cloud!
+                    and interest in building engaging interactive FullStack web applications while also engineering high
+                    <br />
+                    <br />
+                    performance data solutions in the cloud!
+                    and interest in building engaging interactive FullStack web applications while also engineering high
+                    performance data solutions in the cloud!
+                </p>
+            </section>
         </div>
-    </section>
-
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch, feel free to reach out on LinkedIn or send me an email!</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/korihuen" target="_blank">LinkedIn</a>
-            <a href="mailto:korihuen@outlook.com">Email</a>
-            <a href="https://www.github.com/korih">Github</a>
-        </div>
-    </section>
-
-
-    <script src="script.js"></script>
+    </div>
 </body>
+
 </html>
