@@ -41,6 +41,7 @@ section {
 @media (max-width: 800px) {
     .container {
         flex-flow: column;
+        margin: 20px;
     }
 }
 
