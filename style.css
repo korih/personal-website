@@ -38,6 +38,12 @@ section {
     max-width: 1000px;
 }
 
+@media (max-width: 800px) {
+    .container {
+        flex-flow: column;
+    }
+}
+
 /* Reusable templates */
 
 /* Left Pane Styling, have to wrap in relative container for sticky */
@@ -138,7 +144,7 @@ section {
 
 .skills-list {
     display: grid;
-    grid-template-columns: repeat(4, 5fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
 }
 
