@@ -1,3 +1,4 @@
+/* element styling */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@
 
 body {
     margin: 0;
+    font-family: monospace;
     padding: 0;
     border-spacing: 0;
     background: black;
@@ -28,7 +30,7 @@ section {
     margin-bottom: 25px;
 }
 
-
+/* Outer container styling */
 .container {
     display: flex;
     overflow: visible;
@@ -36,6 +38,9 @@ section {
     max-width: 1000px;
 }
 
+/* Reusable templates */
+
+/* Left Pane Styling, have to wrap in relative container for sticky */
 .container-inner {
     position: relative;
     display: unset;
@@ -54,10 +59,7 @@ section {
     top: 150px;
 }
 
-#right-pane {
-    width: 50%;
-}
-
+/* Text Section */
 .header-text {
     color: white;
     font-size: 50px;
@@ -69,6 +71,7 @@ section {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 15px;
+    line-height: 22px;
 }
 
 .sub-text.title {
@@ -76,10 +79,16 @@ section {
     font-style: italic;
 }
 
+.sub-text.about {
+    font-size: 17px;
+    width: 100%;
+}
+
 .sub-text {
     width: 80%;
 }
 
+/* Navigation stuff */
 .jumps {
     margin: 20px;
 }
@@ -95,6 +104,7 @@ section {
     width: 5px;
 }
 
+/* Socials */
 #socials {
     display: flex;
     align-items: center;
@@ -110,9 +120,17 @@ section {
     margin-left: 20px;
 }
 
+/* Right pane */
+#right-pane {
+    width: 50%;
+}
+
 #about {
     margin-top: 20px;
+    scroll-margin-top: 100px;
 }
+
+/* Skills templates stuff */
 
 .skill {
     text-decoration: none;
@@ -128,9 +146,16 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    justify-self: center;
+    justify-items: center;
+    gap: 15px;
     padding: 10px;
-    background: grey;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .skills-headers {
@@ -139,4 +164,61 @@ section {
 
 .skills {
     margin-top: 10px;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.experience-left {
+    width: 150px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}
+
+.experience-right {
+    width: 75%;
+}
+
+.experience-date {
+    font-size: 12px;
+    font-weight: 600px;
+    opacity: 80%;
+}
+
+.experience-title {
+    font-size: 18px;
+    font-weight: 500px;
+}
+
+.experience-body {
+    opacity: 95%;
+}
+
+.projects-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+.projects-left {
+    width: 25%;
+}
+
+.projects-right {
+    width: 75%;
+}
+
+.projects-header {
+    font-size: 18px;
+    font-weight: 500px;
+}
+
+.projects-body {
+    font-size: 12px;
+    font-weight: 500px;
+    opacity: 95%;
 }
