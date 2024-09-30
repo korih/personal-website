@@ -35,14 +35,8 @@ section {
     display: flex;
     overflow: visible;
     margin: 100px;
+    margin-bottom: 10px;
     max-width: 1000px;
-}
-
-@media (max-width: 800px) {
-    .container {
-        flex-flow: column;
-        margin: 20px;
-    }
 }
 
 /* Reusable templates */
@@ -65,6 +59,49 @@ section {
     margin-top: 20px;
     top: 150px;
 }
+
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+        flex-flow: column;
+        margin: 20px;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .container-inner {
+        flex-flow: column;
+        margin: 20px;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+   }
+
+    #left-pane {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        margin-left: 20px;
+        margin-top: 20px;
+        top: 150px;
+
+    }
+
+    #into {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+ 
+    }
+}
+
 
 /* Text Section */
 .header-text {
