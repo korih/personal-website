@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "title": "Kori Huen",
+    "description": "Personal website for portfolio and blogging"
+  },
+  "personal": {
+    "name": "Kori Huen",
+    "title": "Software Engineer",
+    "location": "Vancouver, BC",
+    "avatar": "/headshot.png",
+    "email": "kori505h@gmail.com",
+    "social": [
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/korih",
+        "icon": "Github"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/korish/",
+        "icon": "Linkedin"
+      },
+      {
+        "platform": "Twitter",
+        "url": "#",
+        "icon": "Twitter"
+      }
+    ]
+  },
+  "about": {
+    "bio": "I have come to the realization that life and Clash of Clans are basically the same",
+    "focus": [
+      "Engineering high performance distributed systems",
+      "Trying to not fall of the side of a mountain",
+      "Reading random chinese, korean, or japanese web novels"
+    ],
+    "languages": [
+  
+    ],
+    "interests": ["Design Systems", "Accessibility", "Typography", "Motion Design", "Photography"]
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "label": "Credentials",
+      "href": "#credentials"
+    },
+    {
+      "label": "Skills",
+      "href": "#skills"
+    },
+    {
+      "label": "Projects",
+      "href": "#projects"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer Intern",
+      "company": "Communications Security Exchange of Canada",
+      "period": "May 2025 - Present",
+      "description": "",
+      "achievements": [
+        "Working in cross-functional data scientist and engineering teams to deliver high quality services.",
+        "Designing Kafka consumers and producers to handle event-driven workflows, messaging and system scalability.",
+        "Refactoring and debugging Spring Boot microservices to solve rate limiting and resource utilization backpressure.",
+        "Managing Spring microservice deployment, configurations, and bindings within deployed Kubernetes clusters."
+      ],
+      "technologies": ["Apache Kafka", "Kubernetes", "Docker", "Spring Boot", "Java"]
+    },
+    {
+      "title": "Software Engineer Intern",
+      "company": "Communications Security Exchange of Canada",
+      "period": "Jan 2024 - Aug 2024",
+      "description": "",
+      "achievements": [
+        "Integrated Micrometer and InfluxDB to enable real-time system monitoring visualization through Grafana.",
+        "Deployed a Kubernetes cron-job microservice to execute scheduled tasks to support existing services in the cluster.",
+        "Built a ETL pipeline microservice that enriched event data to facilitate data driven analytics and decisions.",
+        "Leveraged Apache Airflow and Apache Spark for workload orchestration and distributed data processing.",
+        "Applied test engineering to develop and deploy robust fault tolerant systems used millions of times every day."
+      ],
+      "technologies": ["Apache Airflow", "Apache Spark", "Kubernetes", "Spring Boot", "Java"]
+    }
+  ],
+  "credentials": {
+    "certifications": [
+      {
+        "name": "Certified UX Professional",
+        "issuer": "Nielsen Norman Group",
+        "date": "2022",
+        "logo": "/nng-logo.png"
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Computer Science",
+        "institution": "University Of British Columbia",
+        "year": "2021-2025",
+        "logo": "/ubc-logo.png"
+      }
+    ],
+    "skills": [
+      "UI Design",
+      "UX Research",
+      "Design Systems",
+      "Wireframing",
+      "Prototyping",
+      "User Testing",
+      "Accessibility",
+      "Design Thinking"
+    ]
+  },
+  "technicalSkills": {
+    "languages": ["Java", "Python", "JavaScript", "Typescript", "C/C++", "Racket", "HTML/CSS"],
+    "frameworks": ["Spring Boot", "Project Reactor", "Mockito", "JUnit", "Flask", "React", "Mocha", "Express.js"],
+    "tools": ["Azure", "AWS", "GCP", "Prometheus", "Grafana", "Loki", "InfluxDB", "MongoDB", "Redis", "Linux", "Git"],
+    "technologies": ["Kafka", "Docker", "Kubernetes", "Apache Spark", "Apache Airflow", "Proxmox", "YOLO", "OpenCV"]
+  }
+}
