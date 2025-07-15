@@ -13,8 +13,6 @@ import { PortfolioHeader } from "@/components/portfolio-header"
 import { getExperienceInfo, getTechnicalSkillsInfo } from "@/lib/data"
 import { BlogCard } from "@/components/blog-card"
 import { BlogHeader } from "@/components/blog-header"
-import { LandingHeader } from "@/components/landing-header"
-import Link from "next/link"
 
 const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
   return <div className="px-2 py-1 bg-zinc-800 rounded-full text-xs font-medium text-zinc-400">{children}</div>
@@ -31,7 +29,7 @@ export default function Home() {
       <div className="fixed inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px] opacity-20 z-0"></div>
 
       {/* Add a Header */}
-      <LandingHeader />
+      <BlogHeader />
 
       <div className="relative z-10 container my-5 mx-auto p-3 sm:p-4 pt-20 sm:pt-24 pb-6 sm:pb-8">
         {/* Main Content Grid */}
@@ -42,14 +40,23 @@ export default function Home() {
                 <CardContent className="p-4 sm:p-6">
                   <div className="flex items-center mb-4 sm:mb-6">
                     <PaperclipIcon className="w-5 h-5 mr-2 text-cyan-400" />
-                    <h3 className="text-lg font-medium">Sections</h3>
+                    <h3 className="text-lg font-medium">Posts</h3>
                   </div>
 
+                  <div className="space-y-6 sm:space-y-8">
+                    {experienceInfo.map((experience, index) => (
+                      <AnimatedSection key={index} animation="fade-up" delay={100 * (index + 1)}>
+                        <BlogCard
+                          title={experience.title}
+                          date=""
+                          description=""
+                          tags={[""]}
+                        />
+                      </AnimatedSection>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
-                    <Link href="/portfolio">Portfolio </Link>
-                    |
-                    <Link href="/blog"> Blog</Link>
             </AnimatedSection>
         </div>
 
