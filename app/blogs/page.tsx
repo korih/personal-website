@@ -3,7 +3,7 @@ import {
   GlobeIcon,
   CodeIcon,
   BriefcaseIcon,
-  PaperclipIcon,
+  PaperclipIcon
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,7 +18,7 @@ import { PortfolioHeader } from "@/components/portfolio-header";
 import { getExperienceInfo, getTechnicalSkillsInfo } from "@/lib/data";
 import { BlogCard } from "@/components/blog-card";
 import { BlogHeader } from "@/components/blog-header";
-import { LandingHeader } from "@/components/landing-header";
+import { getAllDynamicPosts, getDynamicPostById } from "@/lib/blogs";
 import Link from "next/link";
 
 const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
@@ -30,9 +30,7 @@ const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default function Home() {
-  const projects = getAllProjects();
-  const experienceInfo = getExperienceInfo();
-  const technicalSkills = getTechnicalSkillsInfo();
+  const blogInfo = getAllDynamicPosts();
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -40,7 +38,7 @@ export default function Home() {
       <div className="fixed inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:20px_20px] opacity-20 z-0"></div>
 
       {/* Add a Header */}
-      <LandingHeader />
+      <BlogHeader />
 
       <div className="relative z-10 container my-5 mx-auto p-3 sm:p-4 pt-20 sm:pt-24 pb-6 sm:pb-8">
         {/* Main Content Grid */}
@@ -48,29 +46,29 @@ export default function Home() {
           {/* Experience Section - Expanded */}
           <AnimatedSection animation="fade-up" id="experience">
             <Card className="bg-zinc-900/70 border-zinc-800 backdrop-blur-sm">
-              <CardContent className="p-4 sm:p-6 flex flex-col justify-center">
-                <div className="flex items-center justify-center mb-4 sm:mb-6">
-                  <h1 className="text-2xl font-medium">
-                    Hello 👋, welcome to my website!
-                  </h1>
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <PaperclipIcon className="w-5 h-5 mr-2 text-cyan-400" />
+                  <h3 className="text-lg font-medium">Posts</h3>
                 </div>
-                <div className="flex items-center justify-center mb-4 sm:mb-6 gap-8">
-                  <div className="flex items-center justify-center mb-4 sm:mb-6">
-                    <Link href="/portfolio">
-                      <div className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-bold text-xl relative overflow-hidden transition-transform duration-300 group-hover:scale-105">
-                        Portfolio
-                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
-                      </div>
+
+                <div className="space-y-6 sm:space-y-8">
+                  {blogInfo.map((blog, index) => (
+                    <Link href={`/blogs/${blog.id}`} key={index}>
+                      <AnimatedSection
+                        key={index}
+                        animation="fade-up"
+                        delay={100 * (index + 1)}
+                      >
+                        <BlogCard
+                          title={blog.title}
+                          date={blog.date}
+                          description={blog.description}
+                          tags={blog.tags}
+                        />
+                      </AnimatedSection>
                     </Link>
-                  </div>
-                  <div className="flex items-center justify-center mb-4 sm:mb-6">
-                    <Link href="/blogs">
-                      <div className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-bold text-xl relative overflow-hidden transition-transform duration-300 group-hover:scale-105">
-                        Blogs
-                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
-                      </div>
-                    </Link>
-                  </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>

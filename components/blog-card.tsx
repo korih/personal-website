@@ -1,28 +1,33 @@
-import { Badge } from "@/components/ui/badge"
-import { CheckCircle2 } from "lucide-react"
+import { Badge } from "@/components/ui/badge";
+import { CheckCircle2 } from "lucide-react";
 
 interface BlogCardProps {
-  title: string
-  date: string
-  description: string
-  tags: string[]
+  title: string;
+  date: Date;
+  description: string;
+  tags: string[];
 }
 
-export function BlogCard({
-  title,
-  date,
-  description,
-  tags,
-}: BlogCardProps) {
+export function BlogCard({ title, date, description, tags }: BlogCardProps) {
   return (
-    <div className="space-y-4 pb-6 border-b border-zinc-800 last:border-0 last:pb-0">
+    <div className="space-y-4 pb-6 border-b border-zinc-800 last:border-0 last:pb-0 mb-5">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
         <div>
           <h4 className="font-medium text-base sm:text-lg">{title}</h4>
-          <div className="text-sm text-cyan-400">company</div>
+          <div className="text-sm text-cyan-400 flex gap-2">
+            {tags.map((tag, index) => (
+              <Badge
+                key={index}
+                variant="outline"
+                className="text-xs bg-zinc-800/50 hover:bg-zinc-800"
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
         </div>
         <div className="text-xs text-zinc-400 bg-zinc-800/70 px-2 py-1 sm:px-3 sm:py-1 rounded-full self-start mt-1 sm:mt-0 sm:self-auto">
-        period
+          {new Date(date).toLocaleDateString()}
         </div>
       </div>
 
@@ -51,5 +56,5 @@ export function BlogCard({
         </div>
       </div> */}
     </div>
-  )
+  );
 }
