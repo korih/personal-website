@@ -1,5 +1,5 @@
-import portfolioData from "@/data/portfolio-data.json"
-import { projects, getAllProjects, getProjectBySlug, getRelatedProjects } from "@/lib/projects"
+import portfolioData from "@/public/data/portfolio-data.json"
+import { projects, getAllProjects, getProjectBySlug, getRelatedProjects } from "@/src/lib/projects"
 
 export const data = portfolioData
 

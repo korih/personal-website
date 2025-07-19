@@ -9,7 +9,7 @@ import { Slider } from "@/components/ui/slider"
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useAnimation, type EasingFunction, type AnimationPreset } from "@/contexts/animation-context"
+import { useAnimation, type EasingFunction, type AnimationPreset } from "@/src/lib/animation-context"
 import { Card } from "@/components/ui/card"
 import { AnimatedSection } from "@/components/animated-section"
 

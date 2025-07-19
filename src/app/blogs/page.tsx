@@ -1,24 +1,13 @@
 import type React from "react";
 import {
-  GlobeIcon,
-  CodeIcon,
-  BriefcaseIcon,
   PaperclipIcon
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { ProjectCard } from "@/components/project-card";
-import { getAllProjects } from "@/lib/data";
-import { ExperienceCard } from "@/components/experience-card";
-import { EnhancedScrollIndicator } from "@/components/enhanced-scroll-indicator";
-import { AnimatedSection } from "@/components/animated-section";
-import { EnhancedProfile } from "@/components/enhanced-profile";
-import { CredentialsSection } from "@/components/credentials-section";
-import { PortfolioHeader } from "@/components/portfolio-header";
-import { getExperienceInfo, getTechnicalSkillsInfo } from "@/lib/data";
-import { BlogCard } from "@/components/blog-card";
-import { BlogHeader } from "@/components/blog-header";
-import { getAllDynamicPosts, getDynamicPostById } from "@/lib/blogs";
+import { Card, CardContent } from "@/src/components/ui/card";
+import { EnhancedScrollIndicator } from "@/src/components/enhanced-scroll-indicator";
+import { AnimatedSection } from "@/src/components/animated-section";
+import { BlogCard } from "@/src/components/blog-card";
+import { BlogHeader } from "@/src/components/blog-header";
+import { getAllDynamicPosts } from "@/src/lib/blogs";
 import Link from "next/link";
 
 const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
@@ -29,8 +18,9 @@ const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default function Home() {
+export default async function Home() {
   const blogInfo = getAllDynamicPosts();
+
 
   return (
     <main className="min-h-screen bg-black text-white">

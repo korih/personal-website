@@ -1,24 +1,10 @@
 import type React from "react";
-import {
-  GlobeIcon,
-  CodeIcon,
-  BriefcaseIcon,
-  PaperclipIcon,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { ProjectCard } from "@/components/project-card";
-import { getAllProjects } from "@/lib/data";
-import { ExperienceCard } from "@/components/experience-card";
-import { EnhancedScrollIndicator } from "@/components/enhanced-scroll-indicator";
-import { AnimatedSection } from "@/components/animated-section";
-import { EnhancedProfile } from "@/components/enhanced-profile";
-import { CredentialsSection } from "@/components/credentials-section";
-import { PortfolioHeader } from "@/components/portfolio-header";
-import { getExperienceInfo, getTechnicalSkillsInfo } from "@/lib/data";
-import { BlogCard } from "@/components/blog-card";
-import { BlogHeader } from "@/components/blog-header";
-import { LandingHeader } from "@/components/landing-header";
+import { Card, CardContent } from "@/src/components/ui/card";
+import { getAllProjects } from "@/src/lib/data";
+import { EnhancedScrollIndicator } from "@/src/components/enhanced-scroll-indicator";
+import { AnimatedSection } from "@/src/components/animated-section";
+import { getExperienceInfo, getTechnicalSkillsInfo } from "@/src/lib/data";
+import { LandingHeader } from "@/src/components/landing-header";
 import Link from "next/link";
 
 const SkillTagComponent = ({ children }: { children: React.ReactNode }) => {

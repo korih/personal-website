@@ -9,9 +9,13 @@
     "lint": "next lint",
     "preview": "opennextjs-cloudflare build && wrangler dev",
     "deploy": "opennextjs-cloudflare build && wrangler deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "wrangler d1 migrations apply personal-website --local",
+    "db:migrate:prod": "wrangler d1 migrations apply personal-website --remote"
   },
   "dependencies": {
+    "@cloudflare/next-on-pages": "^1.13.12",
     "@hookform/resolvers": "^3.3.4",
     "@opennextjs/cloudflare": "^1.5.1",
     "@radix-ui/react-accordion": "1.2.2",
@@ -46,6 +50,8 @@
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
     "date-fns": "^3.0.0",
+    "drizzle-kit": "^0.31.4",
+    "drizzle-orm": "^0.44.3",
     "embla-carousel-react": "8.5.1",
     "gray-matter": "^4.0.3",
     "input-otp": "1.4.1",
