@@ -1,14 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import Markdown from "markdown-to-jsx";
-import { BlogPost as BlogPostInterface, getDynamicPostById } from "@/lib/blogs";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { AnimatedSection } from "@/components/animated-section";
-import { PortfolioHeader } from "@/components/portfolio-header";
-import { EnhancedScrollIndicator } from "@/components/enhanced-scroll-indicator";
-import { BlogHeader } from "@/components/blog-header";
+import { BlogPost as BlogPostInterface, getDynamicPostById } from "@/src/lib/blogs";
+import { Card, CardContent } from "@/src/components/ui/card";
+import { AnimatedSection } from "@/src/components/animated-section";
+import { EnhancedScrollIndicator } from "@/src/components/enhanced-scroll-indicator";
+import { BlogHeader } from "@/src/components/blog-header";
 
 interface Props {
   params: { id: string };
