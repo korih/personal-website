@@ -1,4 +1,4 @@
-import Link from "next/link";GV
+import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import Markdown from "markdown-to-jsx";
 import { BlogPost as BlogPostInterface, getDynamicPostById } from "@/src/lib/blogs";

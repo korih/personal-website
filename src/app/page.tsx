@@ -50,16 +50,12 @@ export default function Home() {
                     </Link>
                   </div>
                   <div className="flex items-center justify-center mb-4 sm:mb-6">
-                    <a
-                      href="https://blog.korih.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <Link href="/blogs">
                       <div className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 font-bold text-xl relative overflow-hidden transition-transform duration-300 group-hover:scale-105">
                         Blogs
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </CardContent>
