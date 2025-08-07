@@ -65,7 +65,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center justify-center mb-4 sm:mb-6">
                     <a
-                      href="https://blog.korih.com"
+                      href="https://blogs.korih.com"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
