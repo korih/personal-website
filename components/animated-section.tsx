@@ -1,9 +1,9 @@
 "use client"
 
 import type { ReactNode } from "react"
-import { useIntersectionObserver } from "@/src/lib/use-intersection-observer"
-import { useAnimation } from "@/src/lib/animation-context"
-import { cn } from "@/src/lib/utils"
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer"
+import { cn } from "@/lib/utils"
+import { useAnimation } from "@/contexts/animation-context"
 
 type AnimationType = "fade-up" | "fade-in" | "slide-left" | "slide-right" | "zoom-in" | "bounce"
 

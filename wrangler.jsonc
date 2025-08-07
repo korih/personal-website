@@ -2,17 +2,11 @@
   "main": ".open-next/worker.js",
   "name": "personal-website",
   "compatibility_date": "2025-03-25",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
-  },
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "personal-website",
-      "database_id": "5a5fd1e8-f475-4dd5-b087-8ef7cdd74fbd"
-    }
-  ],
-  "$schema": "node_modules/wrangler/config-schema.json"
+  }
 }
