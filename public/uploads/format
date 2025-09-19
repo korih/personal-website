@@ -1,6 +1,0 @@
----
-title: "Hello from SSR"
-date: "2025-07-15"
-description: "This blog post is rendered dynamically from /public/uploads"
-tags: ["dynamic", "nextjs", "markdown"]
----

@@ -31,10 +31,7 @@ export function EnhancedProfile() {
             </div>
             <div className="text-center">
               <h2 className="text-xl sm:text-2xl font-bold">{personalInfo.name}</h2>
-              <p className="text-sm text-cyan-400 mb-1">{personalInfo.title}</p>
               <div className="flex items-center justify-center text-xs text-zinc-400 mb-3">
-                <MapPin className="w-3 h-3 mr-1" />
-                <span>{personalInfo.location}</span>
               </div>
             </div>
           </div>

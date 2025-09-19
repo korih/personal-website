@@ -30,6 +30,23 @@ export interface Project {
   relatedProjects?: RelatedProject[]
 }
 
+export interface Blog {
+  id: number
+  slug: string
+  title: string
+  category: string
+  shortDescription: string
+  description: string[]
+  features: string[]
+  coverImage: string
+  thumbnailImage: string
+  gallery?: ProjectGalleryImage[]
+  client?: string
+  timeline: string
+  githubUrl?: string
+  relatedProjects?: RelatedProject[]
+}
+
 const projects: Project[] = [
   {
     id: 1,
@@ -55,11 +72,40 @@ const projects: Project[] = [
   }
 ]
 
-export { projects }
+const blogs: Project[] = [
+  {
+    id: 1,
+    slug: "https://github.com/korih/racket-compiler",
+    title: "TODO",
+    category: "Compiler",
+    shortDescription: "",
+    description: [
+    ],
+    features: [
+    ],
+    technologies: ["React Native", "TypeScript", "Node.js", "Express", "MongoDB", "AWS", "Firebase"],
+    coverImage: "/racker-compiler-preview.svg",
+    thumbnailImage: "/racker-compiler-preview.svg",
+    gallery: [
+    ],
+    timeline: "",
+    role: "",
+    liveUrl: "https://github.com/korih/racket-compiler",
+    githubUrl: "https://github.com/korih/racket-compiler",
+    relatedProjects: [
+    ],
+  }
+]
+
+export { projects, blogs }
 
 // Add these functions after the projects array export
 
 export function getAllProjects(): Project[] {
+  return projects
+}
+
+export function getAllBlogs(): Project[] {
   return projects
 }
 

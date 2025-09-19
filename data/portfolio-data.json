@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Kori Huen",
+    "title": "Kori",
     "description": "Personal website for portfolio and blogging"
   },
   "personal": {
-    "name": "Kori Huen",
+    "name": "Kori",
     "title": "Software Engineer",
     "location": "Vancouver, BC",
     "avatar": "/headshot.png",
@@ -28,9 +28,9 @@
     ]
   },
   "about": {
-    "bio": "I have come to the realization that life and Clash of Clans are basically the same",
+    "bio": "Hello there! This is where I share cool things about myself",
     "focus": [
-      "Engineering high performance distributed systems",
+      "Building things (at least trying to)",
       "Trying to not fall of the side of a mountain",
       "Reading random chinese, korean, or japanese web novels"
     ],
@@ -41,24 +41,8 @@
   },
   "navigation": [
     {
-      "label": "Home",
+      "label": "",
       "href": "/"
-    },
-    {
-      "label": "Experience",
-      "href": "#experience"
-    },
-    {
-      "label": "Credentials",
-      "href": "#credentials"
-    },
-    {
-      "label": "Skills",
-      "href": "#skills"
-    },
-    {
-      "label": "Projects",
-      "href": "#projects"
     }
   ],
   "experience": [
@@ -68,10 +52,9 @@
       "period": "May 2025 - Present",
       "description": "",
       "achievements": [
-        "Working in cross-functional data scientist and engineering teams to deliver high quality services.",
-        "Designing Kafka consumers and producers to handle event-driven workflows, messaging and system scalability.",
-        "Refactoring and debugging Spring Boot microservices to solve rate limiting and resource utilization backpressure.",
-        "Managing Spring microservice deployment, configurations, and bindings within deployed Kubernetes clusters."
+        "Building ETL pipelines for big data",
+        "Building microservices to support data ingestion and processing in a Kubernetes cluster",
+        "Leveraging Apache Kafka for real-time data streaming and processing"
       ],
       "technologies": ["Apache Kafka", "Kubernetes", "Docker", "Spring Boot", "Java"]
     },
@@ -81,13 +64,11 @@
       "period": "Jan 2024 - Aug 2024",
       "description": "",
       "achievements": [
-        "Integrated Micrometer and InfluxDB to enable real-time system monitoring visualization through Grafana.",
-        "Deployed a Kubernetes cron-job microservice to execute scheduled tasks to support existing services in the cluster.",
-        "Built a ETL pipeline microservice that enriched event data to facilitate data driven analytics and decisions.",
-        "Leveraged Apache Airflow and Apache Spark for workload orchestration and distributed data processing.",
-        "Applied test engineering to develop and deploy robust fault tolerant systems used millions of times every day."
+        "Building data workflows using Apache Airflow to automate data ingestion, processing, and analysis tasks",
+        "Developing scalable data processing applications using Apache Spark to handle large datasets efficiently",
+        "Leveraging data to make informed decisions and drive insights"
       ],
-      "technologies": ["Apache Airflow", "Apache Spark", "Kubernetes", "Spring Boot", "Java"]
+      "technologies": ["Apache Airflow", "Apache Spark", "Python"]
     }
   ],
   "credentials": {

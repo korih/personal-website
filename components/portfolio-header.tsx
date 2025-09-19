@@ -88,12 +88,6 @@ export function PortfolioHeader() {
                 <span className="absolute inset-0 bg-cyan-500/0 rounded-md group-hover:bg-cyan-500/10 transition-all duration-300"></span>
 
                 {/* Hover effect - bottom border */}
-                <span
-                  className={cn(
-                    "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-4/5",
-                    isActive && "w-4/5",
-                  )}
-                ></span>
               </Link>
             )
           })}
