@@ -2,3 +2,4 @@ node_modules/
 .next/
 .open-next/
 .wrangler/
+.DS_Store
