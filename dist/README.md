@@ -1,1 +1,0 @@
-This folder contains the built output assets for the worker "personal-website" generated at 2025-09-21T00:35:31.644Z.
