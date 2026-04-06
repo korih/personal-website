@@ -16,7 +16,8 @@ export default function AboutPage() {
           to build things that actually work.
         </p>
         <p>
-          Outside of code, I read a lot — mostly light novels and the occasional film. I&apos;ve
+          Outside of code, I read a lot — mostly east asian WebNovels or Warhammer 40k. I also 
+          love to watch movies or pretty much anything with a good story I&apos;ve
           built this site to write about things that interest me without the constraints of a
           platform.
         </p>
@@ -29,10 +30,13 @@ export default function AboutPage() {
         <h2>Get in touch</h2>
         <p>
           Find me on{" "}
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/korih" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>{" "}
-          or reach out by email.
+          or checkout my{" "}
+          <a href="https://anilist.co/user/Skidlez/" target="_blank" rel="noopener noreferrer">
+            Anilist!
+          </a>{" "}
         </p>
       </div>
     </div>
