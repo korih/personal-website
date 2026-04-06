@@ -25,8 +25,11 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Type check
+      - name: Type check (app)
         run: npx tsc --noEmit
+
+      - name: Type check (tests)
+        run: npx tsc --noEmit --project tsconfig.test.json
 
   deploy:
     name: Deploy to Cloudflare
