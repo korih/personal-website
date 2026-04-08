@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     const ctx = await getCloudflareContext({ async: true }); const env = ctx.env as {
       SESSIONS: KVNamespace;
       MEDIA: R2Bucket;
-      NEXT_PUBLIC_SITE_URL: string;
+      R2_PUBLIC_URL: string;
     };
 
     // Auth check
@@ -37,8 +37,7 @@ export async function POST(request: Request) {
       httpMetadata: { contentType: file.type },
     });
 
-    // Return the public URL — adjust if you have a custom domain on R2
-    const url = `${env.NEXT_PUBLIC_SITE_URL}/api/media/${encodeURIComponent(key)}`;
+    const url = `${env.R2_PUBLIC_URL}/${key}`;
     return NextResponse.json({ url });
   } catch (err) {
     console.error("Upload error:", err);
