@@ -5,11 +5,11 @@ import type { Project } from "@/lib/types";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Software projects I've built — compilers, web apps, tools, and experiments. Mostly TypeScript, Rust, and Go. Source code on GitHub.",
+    "Software projects I've built — compilers, web apps, tools, and experiments. Mostly TypeScript, Rust, and Java. Source code on GitHub.",
   openGraph: {
     title: "Projects — Kori H",
     description:
-      "Software projects I've built — compilers, web apps, tools, and experiments. Mostly TypeScript, Rust, and Go. Source code on GitHub.",
+      "Software projects I've built — compilers, web apps, tools, and experiments. Mostly TypeScript, Rust, and Java. Source code on GitHub.",
     url: "/projects",
   },
 };

@@ -9,8 +9,11 @@ export default function HomePage() {
           Hey, I&apos;m Kori.
         </h1>
         <p className="text-lg text-fg-muted mb-8 leading-relaxed">
-          Software developer, avid reader, and outdoor enthusiast. I write about tech,
-          books I&apos;ve been reading, and films worth watching.
+          Software developer, avid reader, and outdoor enthusiast. I write about tech, 
+          books I&apos;ve been reading, and films worth watching. I mostly work professionally 
+          with Java but in my free time I love to work with Rust and Typescript. (I'm lowkey also a 
+          lisp fan). I also love garbage reading garbage webnovels online so I spam those often. 
+          But I do need to touch grass so i'll be writing about my outdoor adventures too.
         </p>
         <div className="flex flex-wrap gap-3">
           <Link

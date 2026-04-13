@@ -15,11 +15,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://korih.dev";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Kori H — Software Developer in Vancouver",
-    template: "%s | Kori H",
+    default: "Kori — Software Developer",
+    template: "%s | Kori",
   },
   description:
-    "Kori H is a software developer based in Vancouver, BC. Writing about code, light novels, and films worth watching.",
+    `
+    My personal website. Writing about software development, light novels, and films worth watching.
+    I'll be writing about my personal insights, experiences, and opinions on software development, 
+    light novels, and films worth watching.
+    `
   icons: {
     icon: [
       { url: "/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
