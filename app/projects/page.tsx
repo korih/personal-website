@@ -4,7 +4,14 @@ import type { Project } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Things I&apos;ve built.",
+  description:
+    "Software projects I've built — compilers, web apps, tools, and experiments. Mostly TypeScript, Rust, and Go. Source code on GitHub.",
+  openGraph: {
+    title: "Projects — Kori H",
+    description:
+      "Software projects I've built — compilers, web apps, tools, and experiments. Mostly TypeScript, Rust, and Go. Source code on GitHub.",
+    url: "/projects",
+  },
 };
 
 async function getProjects(): Promise<Project[]> {

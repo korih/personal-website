@@ -6,7 +6,14 @@ import type { Review } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Light Novel Reviews",
-  description: "Light novel reviews and recommendations.",
+  description:
+    "Light novel reviews and recommendations with ratings. Covering isekai, fantasy, romance, and everything in between — honest takes from an avid reader.",
+  openGraph: {
+    title: "Light Novel Reviews — Kori H",
+    description:
+      "Light novel reviews and recommendations with ratings. Covering isekai, fantasy, romance, and everything in between — honest takes from an avid reader.",
+    url: "/reviews/light-novels",
+  },
 };
 
 async function getLNReviews(): Promise<Review[]> {

@@ -32,11 +32,19 @@ export async function generateMetadata({
 }: {
   params: Promise<{ type: string; slug: string }>;
 }): Promise<Metadata> {
-  const review = await getReview((await params).type, (await params).slug);
+  const { type, slug } = await params;
+  const review = await getReview(type, slug);
   if (!review) return {};
   return {
     title: review.title,
     description: review.excerpt ?? undefined,
+    openGraph: {
+      title: review.title,
+      description: review.excerpt ?? undefined,
+      url: `/reviews/${type}/${slug}`,
+      type: "article",
+      ...(review.cover_url ? { images: [{ url: review.cover_url }] } : {}),
+    },
   };
 }
 

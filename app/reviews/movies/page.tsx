@@ -6,7 +6,14 @@ import type { Review } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Movie Reviews",
-  description: "Film reviews and ratings.",
+  description:
+    "Film reviews with ratings — everything from mainstream blockbusters to obscure indie and foreign films. Written by a developer who watches too many movies.",
+  openGraph: {
+    title: "Movie Reviews — Kori H",
+    description:
+      "Film reviews with ratings — everything from mainstream blockbusters to obscure indie and foreign films. Written by a developer who watches too many movies.",
+    url: "/reviews/movies",
+  },
 };
 
 async function getMovieReviews(): Promise<Review[]> {

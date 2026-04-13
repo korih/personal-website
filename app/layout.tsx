@@ -10,12 +10,30 @@ const inter = Inter({
   display: "swap",
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://korih.dev";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "kori",
-    template: "%s | kori",
+    default: "Kori H — Software Developer in Vancouver",
+    template: "%s | Kori H",
   },
-  description: "Personal website — blog, reviews, projects.",
+  description:
+    "Kori H is a software developer based in Vancouver, BC. Writing about code, light novels, and films worth watching.",
+  icons: {
+    icon: [
+      { url: "/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon_io/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/favicon_io/apple-touch-icon.png",
+    shortcut: "/favicon_io/favicon.ico",
+  },
+  manifest: "/favicon_io/site.webmanifest",
+  openGraph: {
+    siteName: "Kori H",
+    locale: "en_CA",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

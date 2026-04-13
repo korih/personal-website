@@ -2,7 +2,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About me.",
+  description:
+    "I'm Kori, a software developer based in Vancouver, BC. I studied CS at UBC and work on compilers, systems, and web projects.",
+  openGraph: {
+    title: "About — Kori H",
+    description:
+      "I'm Kori, a software developer based in Vancouver, BC. I studied CS at UBC and work on compilers, systems, and web projects.",
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {

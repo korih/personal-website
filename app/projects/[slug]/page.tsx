@@ -22,11 +22,18 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const project = await getProject((await params).slug);
+  const { slug } = await params;
+  const project = await getProject(slug);
   if (!project) return {};
   return {
     title: project.name,
     description: project.tagline ?? undefined,
+    openGraph: {
+      title: project.name,
+      description: project.tagline ?? undefined,
+      url: `/projects/${slug}`,
+      ...(project.cover_url ? { images: [{ url: project.cover_url }] } : {}),
+    },
   };
 }
 

@@ -4,7 +4,14 @@ import type { Post } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Writing on software, tools, and other things I find interesting.",
+  description:
+    "Writing on software engineering, programming tools, and ideas I find worth sharing. Posts on TypeScript, Rust, compilers, and more.",
+  openGraph: {
+    title: "Blog — Kori H",
+    description:
+      "Writing on software engineering, programming tools, and ideas I find worth sharing. Posts on TypeScript, Rust, compilers, and more.",
+    url: "/blog",
+  },
 };
 
 async function getPosts(): Promise<Post[]> {

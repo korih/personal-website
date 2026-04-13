@@ -4,7 +4,14 @@ import { Film, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Reviews",
-  description: "Movie and light novel reviews.",
+  description:
+    "My reviews of movies and light novels — honest takes with ratings. From arthouse films to isekai, if I read or watched it, I wrote about it.",
+  openGraph: {
+    title: "Reviews — Kori H",
+    description:
+      "My reviews of movies and light novels — honest takes with ratings. From arthouse films to isekai, if I read or watched it, I wrote about it.",
+    url: "/reviews",
+  },
 };
 
 export default function ReviewsPage() {
