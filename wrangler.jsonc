@@ -4,6 +4,7 @@
 	"compatibility_flags": [
 		"nodejs_compat"
 	],
+	"no_bundle": true,
 	"main": ".open-next/worker.js",
 	"assets": {
 		"binding": "ASSETS",
