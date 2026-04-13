@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   description:
     `
     My personal website. Writing about software development, light novels, and films worth watching.
-    I'll be writing about my personal insights, experiences, and opinions on software development, 
+    I'll be writing about my personal insights, experiences, and opinions on software development,
     light novels, and films worth watching.
-    `
+    `,
   icons: {
     icon: [
       { url: "/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
