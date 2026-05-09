@@ -2,6 +2,20 @@
 const nextConfig = {
   output: "standalone",
   poweredByHeader: false,
+  async redirects() {
+    return [
+      {
+        source: "/reviews/movies",
+        destination: "/reviews",
+        permanent: true,
+      },
+      {
+        source: "/reviews/light-novels",
+        destination: "/reviews",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

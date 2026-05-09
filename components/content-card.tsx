@@ -10,6 +10,7 @@ interface ContentCardProps {
   coverUrl?: string | null;
   meta?: string;
   badge?: string;
+  tags?: string[];
   className?: string;
 }
 
@@ -21,6 +22,7 @@ export function ContentCard({
   coverUrl,
   meta,
   badge,
+  tags,
   className,
 }: ContentCardProps) {
   return (
@@ -43,6 +45,18 @@ export function ContentCard({
         </div>
       )}
       <div className="p-4">
+        {tags && tags.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mb-2">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="text-xs border border-border rounded-full px-2 py-0.5 text-fg-muted"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
         <div className="flex items-start justify-between gap-2 mb-1">
           <h3 className="font-semibold text-fg leading-snug line-clamp-2 group-hover:underline underline-offset-2">
             {title}
