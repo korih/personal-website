@@ -37,7 +37,14 @@ export default function AboutPage() {
           </a>{" "}
           or checkout my{" "}
           <a href="https://anilist.co/user/Skidlez/" target="_blank" rel="noopener noreferrer">
-            Anilist!
+            Anilist,
+          </a>{" "}
+          <a href="https://www.novelupdates.com/user/1272664/skidlezzz/" target="_blank" rel="noopener noreferrer">
+            Novel Updates,
+          </a>{" "}
+          or {" "}
+          <a href="https://www.goodreads.com/user/show/200301676-kori-h" target="_blank" rel="noopener noreferrer">
+            Goodreads!
           </a>{" "}
         </p>
       </div>
