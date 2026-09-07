@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { ContentCard } from "@/components/content-card";
-import type { MediaType, Review } from "@/lib/types";
+import { ReviewsGrid } from "@/components/reviews-grid";
+import type { Review } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Reviews",
@@ -13,20 +13,6 @@ export const metadata: Metadata = {
     url: "/reviews",
   },
 };
-
-const REVIEW_TYPE_LABELS = {
-  movie: "Movie",
-  light_novel: "Light Novel",
-  manga: "Manga",
-  anime: "Anime",
-} satisfies Record<MediaType, string>;
-
-const REVIEW_TYPE_PATHS = {
-  movie: "movies",
-  light_novel: "light-novels",
-  manga: "manga",
-  anime: "anime",
-} satisfies Record<MediaType, string>;
 
 async function getReviews(): Promise<Review[]> {
   try {
@@ -49,21 +35,7 @@ export default async function ReviewsPage() {
       {reviews.length === 0 ? (
         <p className="text-fg-muted">No reviews yet — check back soon.</p>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {reviews.map((review) => (
-            <ContentCard
-              key={review.id}
-              href={`/reviews/${REVIEW_TYPE_PATHS[review.media_type]}/${review.slug}`}
-              title={review.title}
-              subtitle={review.creator ?? undefined}
-              excerpt={review.excerpt}
-              coverUrl={review.cover_url}
-              badge={review.rating ? `${review.rating}/10` : undefined}
-              meta={review.year?.toString()}
-              tags={[REVIEW_TYPE_LABELS[review.media_type]]}
-            />
-          ))}
-        </div>
+        <ReviewsGrid reviews={reviews} />
       )}
     </div>
   );

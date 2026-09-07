@@ -41,7 +41,26 @@ export function ReviewForm({ initialData, mode }: ReviewFormProps) {
   const [coverUrl, setCoverUrl] = useState(initialData?.cover_url ?? "");
   const [published, setPublished] = useState(initialData?.published ?? false);
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
+
+  const handleCoverUpload = async (file: File | undefined) => {
+    if (!file) return;
+    setUploading(true);
+    setError("");
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      const res = await fetch("/api/upload", { method: "POST", body: formData });
+      if (!res.ok) throw new Error("Upload failed");
+      const { url } = (await res.json()) as { url: string };
+      setCoverUrl(url);
+    } catch {
+      setError("Image upload failed");
+    } finally {
+      setUploading(false);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -184,15 +203,40 @@ export function ReviewForm({ initialData, mode }: ReviewFormProps) {
       </div>
       <div>
         <label className="block text-sm font-medium mb-1.5">Cover image URL</label>
-        <input
-          value={coverUrl}
-          onChange={(e) => setCoverUrl(e.target.value)}
-          className={cn(
-            "w-full bg-bg-elev border border-border rounded-lg px-3 py-2 text-sm",
-            "focus:outline-none focus:ring-2 focus:ring-fg focus:ring-offset-2 focus:ring-offset-bg"
-          )}
-          placeholder="https://..."
-        />
+        <div className="flex gap-2">
+          <input
+            value={coverUrl}
+            onChange={(e) => setCoverUrl(e.target.value)}
+            className={cn(
+              "w-full bg-bg-elev border border-border rounded-lg px-3 py-2 text-sm",
+              "focus:outline-none focus:ring-2 focus:ring-fg focus:ring-offset-2 focus:ring-offset-bg"
+            )}
+            placeholder="https://..."
+          />
+          <label
+            className={cn(
+              "shrink-0 px-3 py-2 text-sm border border-border rounded-lg cursor-pointer whitespace-nowrap",
+              "hover:bg-bg-elev transition-colors",
+              uploading && "opacity-50 pointer-events-none"
+            )}
+          >
+            {uploading ? "Uploading…" : "Upload"}
+            <input
+              type="file"
+              accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
+              className="hidden"
+              onChange={(e) => handleCoverUpload(e.target.files?.[0])}
+            />
+          </label>
+        </div>
+        {coverUrl && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={coverUrl}
+            alt="Cover preview"
+            className="mt-2 h-24 rounded-lg border border-border object-cover"
+          />
+        )}
       </div>
       <div>
         <label className="block text-sm font-medium mb-1.5">Review *</label>
